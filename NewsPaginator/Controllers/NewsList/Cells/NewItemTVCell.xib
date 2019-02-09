@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="NewItemTVCell" id="KGk-i7-Jjw" customClass="NewItemTVCell" customModule="NewsPaginator" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="128"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="127.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nv3-F5-pYe" userLabel="View for Shadow">
+                        <rect key="frame" x="16" y="8" width="288" height="111.5"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                <real key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                <size key="value" width="0.0" height="3"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                <real key="value" value="0.40000000000000002"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nuo-js-t3M" userLabel="Container">
+                        <rect key="frame" x="16" y="8" width="288" height="111.5"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emptyImage" translatesAutoresizingMaskIntoConstraints="NO" id="aTi-23-RML">
+                                <rect key="frame" x="0.0" y="0.0" width="111.5" height="111.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="aTi-23-RML" secondAttribute="height" id="FIU-EV-iOM"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TitleLabel" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iIo-9p-gEj">
+                                <rect key="frame" x="119.5" y="12" width="156.5" height="31.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31.5" id="wOb-2n-GhH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="alN-qA-eGD">
+                                <rect key="frame" x="119.5" y="47.5" width="156.5" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Cj2-jd-8eP">
+                                <rect key="frame" x="37.5" y="37.5" width="37" height="37"/>
+                                <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Cj2-jd-8eP" firstAttribute="centerY" secondItem="aTi-23-RML" secondAttribute="centerY" id="3yr-2f-VWe"/>
+                            <constraint firstItem="iIo-9p-gEj" firstAttribute="top" secondItem="Nuo-js-t3M" secondAttribute="top" constant="12" id="5tE-9q-7dY"/>
+                            <constraint firstAttribute="bottom" secondItem="alN-qA-eGD" secondAttribute="bottom" constant="4" id="69y-BP-AjC"/>
+                            <constraint firstAttribute="trailing" secondItem="iIo-9p-gEj" secondAttribute="trailing" constant="12" id="A6q-jB-WPw"/>
+                            <constraint firstItem="alN-qA-eGD" firstAttribute="top" secondItem="iIo-9p-gEj" secondAttribute="bottom" constant="4" id="Ub6-CG-9JK"/>
+                            <constraint firstItem="alN-qA-eGD" firstAttribute="leading" secondItem="iIo-9p-gEj" secondAttribute="leading" id="amN-i4-zBz"/>
+                            <constraint firstItem="iIo-9p-gEj" firstAttribute="leading" secondItem="aTi-23-RML" secondAttribute="trailing" constant="8" id="mda-20-YLw"/>
+                            <constraint firstItem="alN-qA-eGD" firstAttribute="trailing" secondItem="iIo-9p-gEj" secondAttribute="trailing" id="nGP-4U-42c"/>
+                            <constraint firstItem="aTi-23-RML" firstAttribute="top" secondItem="Nuo-js-t3M" secondAttribute="top" id="rRe-Ec-780"/>
+                            <constraint firstAttribute="bottom" secondItem="aTi-23-RML" secondAttribute="bottom" id="rxS-Jm-b3h"/>
+                            <constraint firstItem="aTi-23-RML" firstAttribute="leading" secondItem="Nuo-js-t3M" secondAttribute="leading" id="sie-vz-kGQ"/>
+                            <constraint firstItem="Cj2-jd-8eP" firstAttribute="centerX" secondItem="aTi-23-RML" secondAttribute="centerX" id="uKd-d2-RKD"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="12"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="Nuo-js-t3M" firstAttribute="trailing" secondItem="nv3-F5-pYe" secondAttribute="trailing" id="EiE-ik-ODG"/>
+                    <constraint firstItem="Nuo-js-t3M" firstAttribute="leading" secondItem="nv3-F5-pYe" secondAttribute="leading" id="FBy-JD-Tb9"/>
+                    <constraint firstAttribute="trailing" secondItem="nv3-F5-pYe" secondAttribute="trailing" constant="16" id="GcX-x6-viQ"/>
+                    <constraint firstItem="nv3-F5-pYe" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="P5B-9Z-JM6"/>
+                    <constraint firstItem="nv3-F5-pYe" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="gQt-M4-z3I"/>
+                    <constraint firstItem="Nuo-js-t3M" firstAttribute="top" secondItem="nv3-F5-pYe" secondAttribute="top" id="gRq-pK-F44"/>
+                    <constraint firstAttribute="bottom" secondItem="nv3-F5-pYe" secondAttribute="bottom" constant="8" id="hR9-H3-UnG"/>
+                    <constraint firstItem="Nuo-js-t3M" firstAttribute="bottom" secondItem="nv3-F5-pYe" secondAttribute="bottom" id="rso-Eq-JGC"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="activityIndicator" destination="Cj2-jd-8eP" id="psD-7S-JyX"/>
+                <outlet property="descriptionLabel" destination="alN-qA-eGD" id="koW-G2-uVY"/>
+                <outlet property="thumbImageView" destination="aTi-23-RML" id="Z9D-nx-jXr"/>
+                <outlet property="titleLabel" destination="iIo-9p-gEj" id="tt8-C1-oIl"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="emptyImage" width="622" height="415"/>
+    </resources>
+</document>

@@ -9,7 +9,7 @@ target 'NewsPaginator' do
     inhibit_all_warnings!
     
     # UI Elements
-    pod 'EmptyDataSet-Swift', '~> 4.0.5'
+    pod 'EmptyDataSet-Swift'
     
     # Convenience for developers
     pod 'ConvenientKit'
@@ -20,7 +20,7 @@ target 'NewsPaginator' do
     pod 'AlamofireObjectMapper'
     pod 'ObjectMapper'
     pod 'SwiftyJSON'
-    pod 'Kingfisher', '~> 4.0.0'
+    pod 'ReachabilitySwift'
     
     # Database
     pod 'RealmSwift'
